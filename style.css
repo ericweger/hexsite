@@ -7,6 +7,9 @@ body{
 	margin:0;
 	padding:0;
 }
+a.overlay{
+	width: 100%; height: 100%; position: absolute;
+}
 #categories{
 	overflow:hidden;
 	width:96%;
