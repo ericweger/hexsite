@@ -7,6 +7,9 @@ body{
 	margin:0;
 	padding:0;
 }
+.pusher{
+
+}
 #categories{
 	overflow:hidden;
 	width:96%;
@@ -28,6 +31,9 @@ body{
 #categories li *{
 	position:absolute;
 	visibility:visible;
+}
+#categories li > a{
+	
 }
 #categories li > div{
 	width:100%;
