@@ -19,14 +19,15 @@
 			<button type="button" class="button" onclick="typeFilter('pusher')">Toggle Empty</button>
 			<button type="button" class="button" onclick="typeFilter('bags')">Toggle Bags</button>
 			<div class="switch">
-			  <input class="switch-input" id="exampleSwitch" type="checkbox" name="exampleSwitch">
-			  <label class="switch-paddle" for="exampleSwitch">
+			  <input class="switch-input" id="bagsSwitch" type="checkbox" name="bagsSwitch" checked onchange="typeFilter('bags')">
+			  <label class="switch-paddle" for="bagsSwitch">
 			    <span class="show-for-sr">Download Kittens</span>
 			  </label>
 			</div>
 			<button type="button" class="button" onclick="toggleAll('hex')">Toggle All</button>
+			<button type="button" class="button" onclick="clicker('bags','hex')">New Toggle</button>
 		</div>
-		<ul class="hex-grid" class="clr">
+		<ul class="hex-grid clr" id="hex">
 			<li class="clothing">
 				<div>
 					<a href="http://www.saint.cc" target="_blank">
@@ -39,11 +40,10 @@
 			<li class="pusher"></li>
 			<li class="bags">
 				<div>
-					<a href="http://shop.outlier.nyc/shop/retail/objects/" target="_blank">
+					<a href="http://shop.outlier.nyc/shop/retail/objects/" target="_blank"></a>
 					<img src="../static/bags_outlier.jpg" alt=""/>
 					<h1>Outlier</h1>
 					<p>Fashionably minimalist Dyneema Composite bags</p>
-					</a>
 				</div>
 			</li>
 			<li class="clothing">
