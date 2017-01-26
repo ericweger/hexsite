@@ -16,8 +16,21 @@
 	</head>
 	<body>
 
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="scripts.js"></script>
+		<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+		<script>
+		  $(document).foundation();
+		</script>
+
+
 		<!-- Start Filter Switch Bar -->
-		<div id="nav">
+		<div id="menubar" class="title-bar">
+			<div class="title-bar-right">
+				<input id="nav-button" class="menu-icon" type="checkbox" for="nav">
+			</div>
+		</div>
+		<div id="nav" class="dropdown-pane">
 			<div class="switchbox">
 				<p>Bags</p>
 				<div class="switch">
@@ -279,10 +292,6 @@
 				</div>
 			</li>
 		</ul>
-		<script src="scripts.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/js/foundation.min.js"></script>
-		<script>
-		  $(document).foundation();
-		</script>
+		
 	</body>
 
