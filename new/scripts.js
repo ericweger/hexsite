@@ -16,16 +16,46 @@ function typeFilter2(classname) {
 function clicker(category,id) {
 	var list = document.getElementById(id);
 	var elements = list.getElementsByClassName(category);
-	
-		var e = elements[0];
-		var classes = e.classList;
+	for (var i = elements.length - 1; i >= 0; i--) {
+			
+		var e = elements[i];
 		var content = e.innerHTML;
 		var div = document.createElement("DIV");
 		div.innerHTML = content;
-		var newclasses = div.classList;
-		newclasses.add(classes, "hidden");
+		div.classList = e.classList;
+		div.classList.add("hidden")
 		list.insertBefore(div, e);
+		list.removeChild(e);
 	
+	};
+	
+}
+function toggleSwitch(category,section,switchid) {
+	var list = document.getElementById(section);
+	var elements = list.getElementsByClassName(category);
+	if (switchid.checked) {
+		for (var i = elements.length - 1; i >= 0; i--) {
+			var e = elements[i];
+			var content = e.innerHTML;
+			var li = document.createElement("LI");
+			li.innerHTML = content;
+			li.classList = e.classList;
+			li.classList.remove("hidden");
+			list.insertBefore(li, e);
+			list.removeChild(e);
+		};
+	} else {
+		for (var i = elements.length - 1; i >= 0; i--) {
+			var e = elements[i];
+			var content = e.innerHTML;
+			var div = document.createElement("DIV");
+			div.innerHTML = content;
+			div.classList = e.classList;
+			div.classList.add("hidden");
+			list.insertBefore(div, e);
+			list.removeChild(e);
+		};
+	};
 	
 	
 }

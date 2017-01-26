@@ -15,26 +15,65 @@
 		
 	</head>
 	<body>
+
+		<!-- Start Filter Switch Bar -->
 		<div id="nav">
-			<button type="button" class="button" onclick="typeFilter('pusher')">Toggle Empty</button>
-			<button type="button" class="button" onclick="typeFilter('bags')">Toggle Bags</button>
-			<div class="switch">
-			  <input class="switch-input" id="bagsSwitch" type="checkbox" name="bagsSwitch" checked onchange="typeFilter('bags')">
-			  <label class="switch-paddle" for="bagsSwitch">
-			    <span class="show-for-sr">Download Kittens</span>
-			  </label>
+			<div class="switchbox">
+				<p>Bags</p>
+				<div class="switch">
+					<input class="switch-input" id="bagsSwitch" type="checkbox" name="bagsSwitch" onchange="toggleSwitch('bags','hex',this)" checked>
+					<label class="switch-paddle" for="bagsSwitch">
+						<span class="show-for-sr">Toggle Bags</span>
+					</label>
+				</div>
 			</div>
-			<button type="button" class="button" onclick="toggleAll('hex')">Toggle All</button>
-			<button type="button" class="button" onclick="clicker('bags','hex')">New Toggle</button>
+			<div class="switchbox">
+				<p>Clothing</p>
+				<div class="switch">
+					<input class="switch-input" id="clothingSwitch" type="checkbox" name="clothingSwitch" onchange="toggleSwitch('clothing','hex',this)" checked>
+					<label class="switch-paddle" for="clothingSwitch">
+						<span class="show-for-sr">Toggle Clothing</span>
+					</label>
+				</div>
+			</div>
+			<div class="switchbox">
+				<p>Gear</p>
+				<div class="switch">
+					<input class="switch-input" id="gearSwitch" type="checkbox" name="gearSwitch" onchange="toggleSwitch('gear','hex',this)" checked>
+					<label class="switch-paddle" for="gearSwitch">
+						<span class="show-for-sr">Toggle Gear</span>
+					</label>
+				</div>
+			</div>
+			<div class="switchbox">
+				<p>Home Goods</p>
+				<div class="switch">
+					<input class="switch-input" id="homeSwitch" type="checkbox" name="homeSwitch" onchange="toggleSwitch('home','hex',this)" checked>
+					<label class="switch-paddle" for="homeSwitch">
+						<span class="show-for-sr">Toggle Home Goods</span>
+					</label>
+				</div>
+			</div>
+			<div class="switchbox">
+				<p>Spaces</p>
+				<div class="switch">
+					<input class="switch-input" id="pusherSwitch" type="checkbox" name="pusherSwitch" onchange="toggleSwitch('pusher','hex',this)" checked>
+					<label class="switch-paddle" for="pusherSwitch">
+						<span class="show-for-sr">Toggle Blank Spaces</span>
+					</label>
+				</div>
+			</div>
 		</div>
+		<!-- End Nav/Filter Switch Bar -->
+
+		<!-- Start Content List -->
 		<ul class="hex-grid clr" id="hex">
 			<li class="clothing">
 				<div>
-					<a href="http://www.saint.cc" target="_blank">
+					<a href="http://www.saint.cc" target="_blank"></a>
 					<img src="../static/clothing_saint.jpg" alt=""/>
 					<h1>Saint Unbreakable</h1>
 					<p>Single-layer motorcycle denim with Dyneema</p>
-					</a>
 				</div>
 			</li>
 			<li class="pusher"></li>
@@ -48,124 +87,195 @@
 			</li>
 			<li class="clothing">
 				<div>
-					<a href="https://ministryofsupply.com/" target="_blank">
+					<a href="https://ministryofsupply.com/" target="_blank"></a>
 					<img src="../static/clothing_ministry_of_supply.jpg" alt=""/>
 					<h1>Ministry of Supply</h1>
 					<p>Smart clothing that performs beyond every expectation</p>
-					</a>
 				</div>
 			</li>
 			<li class="bags">
 				<div>
-					<a href="https://missionworkshop.com/collections/bags" target="_blank">
+					<a href="https://missionworkshop.com/collections/bags" target="_blank"></a>
 					<img src="../static/bags_mission_workshop.jpg" alt=""/>
 					<h1>Mission Workshop</h1>
 					<p>Upscale and tough urban cycling gear</p>
-					</a>
 				</div>
 			</li>
 			<li class="pusher"></li>
 			<li class="bags">
 				<div class="">
-					<a href="http://www.chromeindustries.com/bags/all/" target="_blank">
+					<a href="http://www.chromeindustries.com/bags/all/" target="_blank"></a>
 					<img src="../static/bags_chrome.jpg" alt=""/>
 					<h1>Chrome</h1>
 					<p>Durable, timeless bags for urban cyclists</p>
-					</a>
 				</div>
 			</li>
 			<li class="clothing">
 				<div>
-					<a href="http://www.saint.cc" target="_blank">
+					<a href="http://www.saint.cc" target="_blank"></a>
 					<img src="../static/clothing_saint.jpg" alt=""/>
 					<h1>Saint Unbreakable</h1>
 					<p>Single-layer motorcycle denim with Dyneema</p>
-					</a>
 				</div>
 			</li>
 			<li class="pusher"></li>
 			<li class="bags">
 				<div>
-					<a href="http://shop.outlier.nyc/shop/retail/objects/" target="_blank">
+					<a href="http://shop.outlier.nyc/shop/retail/objects/" target="_blank"></a>
 					<img src="../static/bags_outlier.jpg" alt=""/>
 					<h1>Outlier</h1>
 					<p>Fashionably minimalist Dyneema Composite bags</p>
-					</a>
 				</div>
 			</li>
 			<li class="clothing">
 				<div>
-					<a href="https://ministryofsupply.com/" target="_blank">
+					<a href="https://ministryofsupply.com/" target="_blank"></a>
 					<img src="../static/clothing_ministry_of_supply.jpg" alt=""/>
 					<h1>Ministry of Supply</h1>
 					<p>Smart clothing that performs beyond every expectation</p>
-					</a>
 				</div>
 			</li>
 			<li class="bags">
 				<div>
-					<a href="https://missionworkshop.com/collections/bags" target="_blank">
+					<a href="https://missionworkshop.com/collections/bags" target="_blank"></a>
 					<img src="../static/bags_mission_workshop.jpg" alt=""/>
 					<h1>Mission Workshop</h1>
 					<p>Upscale and tough urban cycling gear</p>
-					</a>
 				</div>
 			</li>
 			<li class="pusher"></li>
 			<li class="bags">
-				<div>
-					<a href="http://www.chromeindustries.com/bags/all/" target="_blank">
+				<div class="">
+					<a href="http://www.chromeindustries.com/bags/all/" target="_blank"></a>
 					<img src="../static/bags_chrome.jpg" alt=""/>
 					<h1>Chrome</h1>
 					<p>Durable, timeless bags for urban cyclists</p>
-					</a>
 				</div>
 			</li>
 			<li class="clothing">
 				<div>
-					<a href="http://www.saint.cc" target="_blank">
+					<a href="http://www.saint.cc" target="_blank"></a>
 					<img src="../static/clothing_saint.jpg" alt=""/>
 					<h1>Saint Unbreakable</h1>
 					<p>Single-layer motorcycle denim with Dyneema</p>
-					</a>
 				</div>
 			</li>
 			<li class="pusher"></li>
 			<li class="bags">
 				<div>
-					<a href="http://shop.outlier.nyc/shop/retail/objects/" target="_blank">
+					<a href="http://shop.outlier.nyc/shop/retail/objects/" target="_blank"></a>
 					<img src="../static/bags_outlier.jpg" alt=""/>
 					<h1>Outlier</h1>
 					<p>Fashionably minimalist Dyneema Composite bags</p>
-					</a>
 				</div>
 			</li>
 			<li class="clothing">
 				<div>
-					<a href="https://ministryofsupply.com/" target="_blank">
+					<a href="https://ministryofsupply.com/" target="_blank"></a>
 					<img src="../static/clothing_ministry_of_supply.jpg" alt=""/>
 					<h1>Ministry of Supply</h1>
 					<p>Smart clothing that performs beyond every expectation</p>
-					</a>
 				</div>
 			</li>
 			<li class="bags">
 				<div>
-					<a href="https://missionworkshop.com/collections/bags" target="_blank">
+					<a href="https://missionworkshop.com/collections/bags" target="_blank"></a>
 					<img src="../static/bags_mission_workshop.jpg" alt=""/>
 					<h1>Mission Workshop</h1>
 					<p>Upscale and tough urban cycling gear</p>
-					</a>
+				</div>
+			</li>
+			<li class="pusher"></li>
+			<li class="bags">
+				<div class="">
+					<a href="http://www.chromeindustries.com/bags/all/" target="_blank"></a>
+					<img src="../static/bags_chrome.jpg" alt=""/>
+					<h1>Chrome</h1>
+					<p>Durable, timeless bags for urban cyclists</p>
+				</div>
+			</li>
+			<li class="clothing">
+				<div>
+					<a href="http://www.saint.cc" target="_blank"></a>
+					<img src="../static/clothing_saint.jpg" alt=""/>
+					<h1>Saint Unbreakable</h1>
+					<p>Single-layer motorcycle denim with Dyneema</p>
 				</div>
 			</li>
 			<li class="pusher"></li>
 			<li class="bags">
 				<div>
-					<a href="http://www.chromeindustries.com/bags/all/" target="_blank">
+					<a href="http://shop.outlier.nyc/shop/retail/objects/" target="_blank"></a>
+					<img src="../static/bags_outlier.jpg" alt=""/>
+					<h1>Outlier</h1>
+					<p>Fashionably minimalist Dyneema Composite bags</p>
+				</div>
+			</li>
+			<li class="clothing">
+				<div>
+					<a href="https://ministryofsupply.com/" target="_blank"></a>
+					<img src="../static/clothing_ministry_of_supply.jpg" alt=""/>
+					<h1>Ministry of Supply</h1>
+					<p>Smart clothing that performs beyond every expectation</p>
+				</div>
+			</li>
+			<li class="bags">
+				<div>
+					<a href="https://missionworkshop.com/collections/bags" target="_blank"></a>
+					<img src="../static/bags_mission_workshop.jpg" alt=""/>
+					<h1>Mission Workshop</h1>
+					<p>Upscale and tough urban cycling gear</p>
+				</div>
+			</li>
+			<li class="pusher"></li>
+			<li class="bags">
+				<div class="">
+					<a href="http://www.chromeindustries.com/bags/all/" target="_blank"></a>
 					<img src="../static/bags_chrome.jpg" alt=""/>
 					<h1>Chrome</h1>
 					<p>Durable, timeless bags for urban cyclists</p>
-					</a>
+				</div>
+			</li>
+			<li class="clothing">
+				<div>
+					<a href="http://www.saint.cc" target="_blank"></a>
+					<img src="../static/clothing_saint.jpg" alt=""/>
+					<h1>Saint Unbreakable</h1>
+					<p>Single-layer motorcycle denim with Dyneema</p>
+				</div>
+			</li>
+			<li class="pusher"></li>
+			<li class="bags">
+				<div>
+					<a href="http://shop.outlier.nyc/shop/retail/objects/" target="_blank"></a>
+					<img src="../static/bags_outlier.jpg" alt=""/>
+					<h1>Outlier</h1>
+					<p>Fashionably minimalist Dyneema Composite bags</p>
+				</div>
+			</li>
+			<li class="clothing">
+				<div>
+					<a href="https://ministryofsupply.com/" target="_blank"></a>
+					<img src="../static/clothing_ministry_of_supply.jpg" alt=""/>
+					<h1>Ministry of Supply</h1>
+					<p>Smart clothing that performs beyond every expectation</p>
+				</div>
+			</li>
+			<li class="bags">
+				<div>
+					<a href="https://missionworkshop.com/collections/bags" target="_blank"></a>
+					<img src="../static/bags_mission_workshop.jpg" alt=""/>
+					<h1>Mission Workshop</h1>
+					<p>Upscale and tough urban cycling gear</p>
+				</div>
+			</li>
+			<li class="pusher"></li>
+			<li class="bags">
+				<div class="">
+					<a href="http://www.chromeindustries.com/bags/all/" target="_blank"></a>
+					<img src="../static/bags_chrome.jpg" alt=""/>
+					<h1>Chrome</h1>
+					<p>Durable, timeless bags for urban cyclists</p>
 				</div>
 			</li>
 		</ul>

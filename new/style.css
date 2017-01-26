@@ -8,8 +8,16 @@ body{
 }
 #nav {
 	display: flex;
-	flex-direction: row;
-	align-items: stretch;
+	flex-flow: row no-wrap;
+	align-items:flex-end;
+}
+.switchbox {
+	margin: 1rem;
+	width: min-content;
+	display: flex;
+	flex-direction:column;
+	align-items:center;
+	text-align: center;
 }
 
 .hex-grid{
@@ -40,7 +48,7 @@ body{
 	width: 100%;
 	height: 100%;
 	color: inherit;
-	z-index: 1;
+	z-index: 2;
 }
 .hex-grid li > div{
 	position: absolute;
@@ -96,7 +104,19 @@ body{
 	}
 	
 }
-@media (max-width:1200px) and (min-width: 901px) {
+@media (max-width:1200px) and (min-width: 1001px) {
+	.hex-grid li {
+		width:18.18181818181818181818%; /* = (100%-H-margin) / (#columns + .5) */
+		padding-bottom:20.99517111064455%; /* =  width /0.866 */
+	}
+	.hex-grid li:nth-of-type(n+6) {
+		margin: -5.3% auto 0 auto;
+	}
+	.hex-grid li:nth-of-type(10n+6) {
+		margin: -5.3% auto 0 9.0909090909090909090909090909091%;
+	}
+}
+@media (max-width:1000px) and (min-width: 801px) {
 	.hex-grid li {
 		width:18.18181818181818181818%; /* = (100%-H-margin) / (#columns + .5) */
 		padding-bottom:20.99517111064455%; /* =  width /0.866 */
