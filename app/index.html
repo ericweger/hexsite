@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Weger Hex</title>
+		<link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css" />
+		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		
+		
+	</head>
+	<body>
+
+		
+
+
+		<!-- Start Filter Switch Bar -->
+		<div id="menubar" class="title-bar">
+			<div class="title-bar-right">
+				<input id="nav-button" class="menu-icon" type="checkbox" for="nav">
+			</div>
+		</div>
+		<div id="nav" class="dropdown-pane">
+			<div class="switchbox">
+				<p>Bags</p>
+				<div class="switch">
+					<input class="switch-input" id="bagsSwitch" type="checkbox" name="bagsSwitch" onchange="toggleSwitch('bags','hex',this)" checked>
+					<label class="switch-paddle" for="bagsSwitch">
+						<span class="show-for-sr">Toggle Bags</span>
+					</label>
+				</div>
+			</div>
+			<div class="switchbox">
+				<p>Clothing</p>
+				<div class="switch">
+					<input class="switch-input" id="clothingSwitch" type="checkbox" name="clothingSwitch" onchange="toggleSwitch('clothing','hex',this)" checked>
+					<label class="switch-paddle" for="clothingSwitch">
+						<span class="show-for-sr">Toggle Clothing</span>
+					</label>
+				</div>
+			</div>
+			<div class="switchbox">
+				<p>Gear</p>
+				<div class="switch">
+					<input class="switch-input" id="gearSwitch" type="checkbox" name="gearSwitch" onchange="toggleSwitch('gear','hex',this)" checked>
+					<label class="switch-paddle" for="gearSwitch">
+						<span class="show-for-sr">Toggle Gear</span>
+					</label>
+				</div>
+			</div>
+			<div class="switchbox">
+				<p>Home Goods</p>
+				<div class="switch">
+					<input class="switch-input" id="homeSwitch" type="checkbox" name="homeSwitch" onchange="toggleSwitch('home','hex',this)" checked>
+					<label class="switch-paddle" for="homeSwitch">
+						<span class="show-for-sr">Toggle Home Goods</span>
+					</label>
+				</div>
+			</div>
+			<div class="switchbox">
+				<p>Spaces</p>
+				<div class="switch">
+					<input class="switch-input" id="pusherSwitch" type="checkbox" name="pusherSwitch" onchange="toggleSwitch('pusher','hex',this)" checked>
+					<label class="switch-paddle" for="pusherSwitch">
+						<span class="show-for-sr">Toggle Blank Spaces</span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<!-- End Nav/Filter Switch Bar -->
+
+		<!-- Start Content List -->
+		<ul class="hex-grid clr" id="hex">
+			
+		</ul>
+		
+		<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<script src="scripts.js"></script>
+		<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+		<script>
+		  $(document).foundation();
+		</script>
+		<script src="https://script.google.com/macros/s/AKfycbykgEgqnmaDEl2Edc4RDdRuz6aYx-NptZbGLSaaeaWp9hbxD1a2/exec?start=1325437200&end=1325439000&prefix=initialize"></script>
+	</body>
+

@@ -18,23 +18,7 @@ body{
 	visibility: visible;
 	background-color: red;
 }
-.hex-border {
-	border-style: solid;
-    border-width:0px 5px;
-    border-color: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    outline-width: 5px;
-    outline-style: solid;
-    outline-color: black;
-}
-.border2 {
-	transform: rotate(60deg);
-}
-.border3 {
-	transform: rotate(-60deg);
-}
+
 .switchbox {
 	margin: 1rem;
 	width: min-content;
@@ -137,7 +121,7 @@ body{
 	}
 	
 }
-@media (min-width:1001px) and (max-width: 1200px) {
+@media (min-width:1101px) and (max-width: 1200px) {
 	.hex-grid li {
 		width:calc(100%/5.5 - 5*1.732*1%/5.5) !important; /* = (100%-H-margin) / (#columns + .5) */
 		padding-bottom:calc(100%/5.5/0.866 - 5*2*1%/5.5) !important; /* =  width /0.866 */
