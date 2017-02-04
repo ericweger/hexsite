@@ -19,58 +19,61 @@
 
 
 		<!-- Start Filter Switch Bar -->
-		<div id="menubar" class="title-bar">
-			<div class="title-bar-right">
-				<input id="nav-button" class="menu-icon" type="checkbox" for="nav">
+		<div id="menubar">
+			<div id="menubar-body"></div>
+			<input id="nav-button" type="checkbox">
+			<label for="nav-button">
+				<span class="show-for-sr">Category Menu</span>
+			</label>
+			<div id="nav" class="dropdown-pane">
+				<div class="switchbox">
+					<p>Bags</p>
+					<div class="switch">
+						<input class="switch-input" id="bagsSwitch" type="checkbox" name="bagsSwitch" onchange="toggleSwitch('bags','hex',this)" checked>
+						<label class="switch-paddle" for="bagsSwitch">
+							<span class="show-for-sr">Toggle Bags</span>
+						</label>
+					</div>
+				</div>
+				<div class="switchbox">
+					<p>Clothing</p>
+					<div class="switch">
+						<input class="switch-input" id="clothingSwitch" type="checkbox" name="clothingSwitch" onchange="toggleSwitch('clothing','hex',this)" checked>
+						<label class="switch-paddle" for="clothingSwitch">
+							<span class="show-for-sr">Toggle Clothing</span>
+						</label>
+					</div>
+				</div>
+				<div class="switchbox">
+					<p>Gear</p>
+					<div class="switch">
+						<input class="switch-input" id="gearSwitch" type="checkbox" name="gearSwitch" onchange="toggleSwitch('gear','hex',this)" checked>
+						<label class="switch-paddle" for="gearSwitch">
+							<span class="show-for-sr">Toggle Gear</span>
+						</label>
+					</div>
+				</div>
+				<div class="switchbox">
+					<p>Home Goods</p>
+					<div class="switch">
+						<input class="switch-input" id="homeSwitch" type="checkbox" name="homeSwitch" onchange="toggleSwitch('home','hex',this)" checked>
+						<label class="switch-paddle" for="homeSwitch">
+							<span class="show-for-sr">Toggle Home Goods</span>
+						</label>
+					</div>
+				</div>
+				<div class="switchbox">
+					<p>Spaces</p>
+					<div class="switch">
+						<input class="switch-input" id="pusherSwitch" type="checkbox" name="pusherSwitch" onchange="toggleSwitch('pusher','hex',this)" checked>
+						<label class="switch-paddle" for="pusherSwitch">
+							<span class="show-for-sr">Toggle Blank Spaces</span>
+						</label>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div id="nav" class="dropdown-pane">
-			<div class="switchbox">
-				<p>Bags</p>
-				<div class="switch">
-					<input class="switch-input" id="bagsSwitch" type="checkbox" name="bagsSwitch" onchange="toggleSwitch('bags','hex',this)" checked>
-					<label class="switch-paddle" for="bagsSwitch">
-						<span class="show-for-sr">Toggle Bags</span>
-					</label>
-				</div>
-			</div>
-			<div class="switchbox">
-				<p>Clothing</p>
-				<div class="switch">
-					<input class="switch-input" id="clothingSwitch" type="checkbox" name="clothingSwitch" onchange="toggleSwitch('clothing','hex',this)" checked>
-					<label class="switch-paddle" for="clothingSwitch">
-						<span class="show-for-sr">Toggle Clothing</span>
-					</label>
-				</div>
-			</div>
-			<div class="switchbox">
-				<p>Gear</p>
-				<div class="switch">
-					<input class="switch-input" id="gearSwitch" type="checkbox" name="gearSwitch" onchange="toggleSwitch('gear','hex',this)" checked>
-					<label class="switch-paddle" for="gearSwitch">
-						<span class="show-for-sr">Toggle Gear</span>
-					</label>
-				</div>
-			</div>
-			<div class="switchbox">
-				<p>Home Goods</p>
-				<div class="switch">
-					<input class="switch-input" id="homeSwitch" type="checkbox" name="homeSwitch" onchange="toggleSwitch('home','hex',this)" checked>
-					<label class="switch-paddle" for="homeSwitch">
-						<span class="show-for-sr">Toggle Home Goods</span>
-					</label>
-				</div>
-			</div>
-			<div class="switchbox">
-				<p>Spaces</p>
-				<div class="switch">
-					<input class="switch-input" id="pusherSwitch" type="checkbox" name="pusherSwitch" onchange="toggleSwitch('pusher','hex',this)" checked>
-					<label class="switch-paddle" for="pusherSwitch">
-						<span class="show-for-sr">Toggle Blank Spaces</span>
-					</label>
-				</div>
-			</div>
-		</div>
+		
 		<!-- End Nav/Filter Switch Bar -->
 
 		<!-- Start Content List -->

@@ -56,9 +56,11 @@ function initialize(initialarray) {
 		var entry = array[i];
 		if (entry.category == "pusher") {
 			list.append('<li class="pusher"></li>')
-		} else {
+		} else if (entry.image) {
 			list.append('<li class="' + entry.category + '"><div><a href="' + entry.url + '" target="_blank"></a><img src="../static/' + entry.image + '"/><h1>' + entry.brand + '</h1><p>' + entry.description + '</p></div></li>');
-		};
+		} else {
+			list.append('<li class="' + entry.category + '"><div><a href="' + entry.url + '" target="_blank"></a><img src="' + entry.imageurl + '"/><h1>' + entry.brand + '</h1><p>' + entry.description + '</p></div></li>');
+		}
 		
 	};
 }
