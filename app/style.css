@@ -80,15 +80,15 @@ body{
 	overflow:hidden;
 	margin:0 auto;
 	display: block;
-	border: solid 1px black;
 	--hex-number: 4;  /* Set as the number showing + 0.5 */
-	--hex-margin: 0.5rem;  /* Half the width between hexagons */
+	--hex-margin: 0.25rem;  /* Half the width between hexagons */
 	--hex-width: calc((100% - 2 * var(--hex-number) * var(--hex-margin) + var(--hex-margin) ) / ( var(--hex-number) + .5) );
 	width: calc(100% - 2rem);
 }
 .hex-grid li {
 	display: block;
 	position:relative;
+	vertical-align: middle;
 	list-style-type:none;
 	float:left;
 	overflow:hidden;
@@ -143,23 +143,28 @@ body{
 	margin:0 auto;   
 }
 .hex-grid li h1, .hex-grid li p {
+	display: block;
 	text-align: center;
 	width: 90%;
-	margin:0 5%;
 	font-family: 'Raleway', sans-serif;
-	z-index: -1;
+	text-shadow: 1px 1px black;
+	top: 0; left: 0; bottom: 0; right: 0;
+	margin: auto;
+	transition: all 0.3s ease-out;
+	height: max-content;
 }
 .hex-grid li h1 {
-	height: 40%;
-	bottom: 50%;
-	font-size:1.5em;
+	font-size:1.2rem;
 }
 .hex-grid li p {
-	height: 40%;
-	top: 50%;
+	line-height: 1.1;
+	top: 200%;
 }
-.hex-grid div:hover h1, .hex-grid div:hover p {
-	z-index: 1;
+.hex-grid div:hover h1 {
+	top: -200%;
+}
+.hex-grid div:hover p {
+	top: 0;
 }
 .hidden {
 	display: none !important;
