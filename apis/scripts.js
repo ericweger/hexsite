@@ -24,7 +24,7 @@ var callback = function callback(response) {
 
 	let data = response["data"].filter(popFilter);
 	var rows = d3.select("#rawdata").selectAll("p").data(data).text(function(d,i) {return d["NAME"]});
-	rows.enter().append("p").text(function(d,i) {return d["NAME"]});
+	rows.enter().append("p").text(function(d,i) {return d["NAME"] + " | Population: " + d[population] + ", Avg. Income: $" + d[income] + "/year, Median Gross Rent: $" + d[median_gross_rent] + "/month"});
 	rows.exit().remove();
 };
 
